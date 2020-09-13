@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{$const.NumberOne}} <br/>
     {{$moment(now).format('dddd, [Ngay] Do MMMM [Nam] YYYY')}}
   </div>
 </template>
