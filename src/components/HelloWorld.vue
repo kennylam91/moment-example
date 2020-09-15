@@ -1,7 +1,8 @@
 <template>
   <div>
     {{$const.NumberOne}} <br/>
-    {{$moment(now).format('dddd, [Ngay] Do MMMM [Nam] YYYY')}}
+    {{$moment(now).format('dddd, [Ngay] Do MMMM [Nam] YYYY')}} <br/>
+    {{$dayjs(now).format('DD/MM/YYYY')}}
   </div>
 </template>
 
@@ -13,10 +14,14 @@ export default {
   },
   data() {
     return {
-      now: this.$moment()
+      now: ''
     }
   },
   filters:{
-  }
+  },
+  created() {
+    this.now = new Date();
+    console.log(this.$dayjs(this.now).format('DD/MM/YYYY'));
+  },
 }
 </script>
