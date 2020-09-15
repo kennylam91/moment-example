@@ -2,7 +2,7 @@
   <div>
     {{$const.NumberOne}} <br/>
     {{$moment(now).format('dddd, [Ngay] Do MMMM [Nam] YYYY')}} <br/>
-    {{$dayjs(now).format('DD/MM/YYYY')}}
+    {{$dayjs(now).format('dddd, [Ngay] DD MMMM [Nam] YYYY')}}
   </div>
 </template>
 
